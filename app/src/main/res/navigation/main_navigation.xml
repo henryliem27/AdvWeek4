@@ -10,16 +10,24 @@
         android:name="com.example.advweek4.view.StudentListFragment"
         android:label="fragment_student_list"
         tools:layout="@layout/fragment_student_list" >
-        <argument
-            android:name="image"
-            app:argType="string" />
         <action
-            android:id="@+id/action_studentListFragment_to_studentDetailFragment2"
+            android:id="@+id/actionStudentDetail"
             app:destination="@id/studentDetailFragment" />
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/studentDetailFragment"
         android:name="com.example.advweek4.view.StudentDetailFragment"
         android:label="fragment_student_detail"
-        tools:layout="@layout/fragment_student_detail" />
+        tools:layout="@layout/fragment_student_detail" >
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
 </navigation>
